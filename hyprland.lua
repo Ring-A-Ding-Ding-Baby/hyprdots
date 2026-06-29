@@ -1,4 +1,6 @@
 require("keybinds")
+require("workspace_rules")
+local palette = dofile("/home/shrimp/.config/stylix/palette.lua")
 -- require("window_rules")
 -- require("workspaces")
 
@@ -40,9 +42,11 @@ hl.config({
   decoration = {
     shadow = {
       -- color=$base00
+      color = "rgba(0, 0, 0, 0)"
+
     },
-    active_opacity = 1.000000,
-    inactive_opacity = 0.800000,
+    active_opacity = 1.0,
+    inactive_opacity = 0.65,
     rounding = 0
   },
 
@@ -58,11 +62,13 @@ hl.config({
   group = {
     groupbar = {
       -- col.active=$base0D
-      -- col.inactive=$base03
-      gaps_in = 0,
+      col = {
+        active = palette.base08,
+        inactive = palette.base0B
+      },
+      gaps_in = 5,
       gaps_out = 0,
       render_titles = false,
-      -- text_color=$base05,
     },
     -- col.border_active=$base0D
     -- col.border_inactive=$base03

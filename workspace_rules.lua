@@ -1,0 +1,6 @@
+hl.workspace_rule({ workspace = "special:file_manager", on_created_empty = "xdg-open ~/" })
+hl.workspace_rule({ workspace = "special:bluetooth", on_created_empty = "wezterm start --class popup -- bluetuith" })
+hl.workspace_rule({ workspace = "special:wifi", on_created_empty = "wezterm start --class popup -- wifitui" })
+hl.workspace_rule({ workspace = "special:audio", on_created_empty = "wezterm start --class popup -- wiremix" })
+hl.workspace_rule({ workspace = "special:htop", on_created_empty = "wezterm start --class popup -- htop" })
+hl.workspace_rule({ workspace = "special:messenger", on_created_empty = "Telegram" })
