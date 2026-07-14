@@ -33,7 +33,7 @@ for i = 1, 10 do
   bind("SUPER + SHIFT + " .. key, window.move({ workspace = i }))
 end
 
-bind("SUPER + S", workspace.swap_monitors({ monitor1 = "+1", monitor2 = "+2" }))
+bind("SUPER + S", workspace.move({ monitor = "+1" }))
 bind("SUPER + G", hl.dsp.group.toggle())
 bind("SUPER + BRACKETLEFT", hl.dsp.group.prev())
 bind("SUPER + BRACKETRIGHT", hl.dsp.group.next())
