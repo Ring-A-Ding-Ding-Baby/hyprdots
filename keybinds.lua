@@ -9,7 +9,7 @@
 --                  --tb "$base01H" --tf "$base06H" \
 --                  --fbb "$base07H" --fbf "$base00H" \
 --                  --scb "$base00H" --scf "$base03H"
-local bemenu_run = [[  bemenu-run -p $(whoami) -Cin --fn "FiraCode Nerd Font 15" ]]
+local bemenu_run = [[  bemenu-run -p $(whoami) --auto-select --single-instance -Cin --fn "FiraCode Nerd Font 15" ]]
 local exec = hl.dsp.exec_cmd
 local submap = hl.dsp.submap
 local window = hl.dsp.window
