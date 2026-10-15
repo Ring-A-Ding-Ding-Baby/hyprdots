@@ -94,3 +94,7 @@ hl.config({
 		disable_splash_rendering = true,
 	},
 })
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprpaper")
+end)
