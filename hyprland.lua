@@ -1,5 +1,5 @@
 require("keybinds")
-require("workspace_rules")
+require("rules")
 local paletteLoc = (os.getenv("XDG_CONFIG_HOME") .. "/stylix/palette.lua")
 local palette = dofile(paletteLoc)
 -- require("window_rules")

@@ -4,4 +4,13 @@ hl.workspace_rule({ workspace = "special:wifi", on_created_empty = "wezterm star
 hl.workspace_rule({ workspace = "special:audio", on_created_empty = "wezterm start --class popup -- wiremix" })
 hl.workspace_rule({ workspace = "special:htop", on_created_empty = "wezterm start --class popup -- htop" })
 hl.workspace_rule({ workspace = "special:messenger", on_created_empty = "Telegram" })
-hl.window_rule({ match = { class = "org.qutebrowser.qutebrowser" }, workspace = 2 })
+
+hl.window_rule({ match = { initial_class = "org.qutebrowser.qutebrowser" }, workspace = 2 })
+hl.window_rule({ match = { initial_class = "steam" }, workspace = 5 })
+hl.window_rule({ match = { initial_class = "discord" }, workspace = "special:messenger" })
+
+hl.on("window.open", function(w)
+	if w ~= nil and w.class == "discord" then
+		hl.dispatch(hl.dsp.window.move({ into_or_create_group = "left", w }))
+	end
+end)
